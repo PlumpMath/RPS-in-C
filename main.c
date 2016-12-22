@@ -41,8 +41,8 @@ void gameMenu() {
     printf("Press 3 to suit\n");
 
     //Get the input from the user
-    char[] input;
-    getline(cin, input);
+    char input[] = "";
+    gets(input);
 
     //Compare the input
     if(input == "1") multiplayer();
@@ -58,31 +58,32 @@ Output : none
 */
 void multiplayer() {
   //Player strings
-  char player1[];
-  char player2[];
+  char player1[] = "";
+  char player2[] = "";
 
   //Rock = 1
   //Paper = 2
   //scissors = 3
 
   //Input string
-  char[] input;
+  char input[] = "";
 
   //Enunciate the different options to both players and get their input
-  printf("Player 1:\n")
-  printf("Enter 1 for rock, 2 for paper and 3 for scissors\n")
+  printf("Player 1:\n");
+  printf("Enter 1 for rock, 2 for paper and 3 for scissors\n");
 
-  getline(cin, input);
+  gets(input);
   player1 = input;
 
-  printf("Player 2:\n")
-  printf("Enter 1 for rock, 2 for paper and 3 for scissors\n")
+  printf("Player 2:\n");
+  printf("Enter 1 for rock, 2 for paper and 3 for scissors\n");
 
-  getline(cin, input);
+  gets(input);
   player2 = input;
 
   //Check for the different win possibilities and announce the winner
-  char[] result = checkWin(player1, player2);
+  char result[] = "";
+  result = checkWin(player1, player2);
 
   printf("Player " + result + " wins !\n");
 
